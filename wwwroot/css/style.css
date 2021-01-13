@@ -1,0 +1,147 @@
+﻿@CHARSET "UTF-8";
+
+ul, li {
+    margin: 0px;
+    padding: 0px;
+}
+body {
+    color: #8A8985; /* teksto spalva */
+    font-family: Arial, Helvetica, sans-serif; /* šriftas */
+    font-size: 12px; /* teksto dydis */
+}
+
+/* pagrindinis puslapio blokas */
+#body {
+    margin: 0;
+    padding: 0;
+    background-color: gray;
+}
+body, html {
+    margin: 0;
+    padding: 0;
+}
+
+/* viršutinė puslapio dalis */
+#header {
+    width: 100%;
+    height: 70px;
+    background-color: #fff;
+    background: #1abc9c;
+    float: left;
+}
+
+/* turinio blokelis */
+#content {
+    width: 100%;
+    height: 620px;
+    background-color: #fff;
+    border-left: 1px solid silver;
+    border-right: 1px solid silver;
+    float: left;
+}
+
+
+/* apatinė puslapio dalis */
+#footer {
+    width: 100%;
+    height: 40px;
+    border: 1px solid silver;
+    float: left;
+    color: black;
+}
+
+
+/* Add a black background color to the top navigation */
+.topMenu {
+    overflow: hidden;
+}
+
+    /* Style the links inside the navigation bar */
+    .topMenu a {
+        float: left;
+        color: #f2f2f2;
+        text-align: center;
+        padding: 23px 30px;
+        text-decoration: none;
+        font-size: 20px;
+    }
+
+        /* Change the color of links on hover */
+        .topMenu a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+        /* Add a color to the active/current link */
+        .topMenu a.active {
+            background-color: #4CAF50;
+            color: white;
+        }
+#header img {
+    float: left;
+    width: 70px;
+    height: 70px;
+    background: #555;
+}
+
+.container {
+    background-image: url('../Images/search.jpg');
+    width: 100%;
+    height: 400px;
+    display: grid;
+}
+    .search {
+        color: black;
+        font-size: 25px;
+        margin: auto;
+    }
+.search input[type=text] {
+    float: left;
+    padding: 6px;
+    border: none;
+    font-size: 17px;
+}
+        .search .btn {
+            float: right;
+            padding: 6px;
+            border: none;
+            font-size: 17px;
+        }
+ul {
+    columns: 2;
+    -webkit-columns: 2;
+    -moz-columns: 2;
+    margin-left: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-right: 20px;
+}
+
+#content1 h2
+{
+    background-color: lightgray;
+}
+#content1
+{
+    background-color : coral;
+    color: black;
+}
+#content2 h2 {
+   background-color: lightgray;
+    }
+
+#content2 {
+    background-color: coral;
+    color: black;
+}
+#content3 h2 {
+    background-color: lightgray;
+}
+
+#content3 {
+    background-color: coral;
+    color: black;
+}
+
+
+

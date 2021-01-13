@@ -1,0 +1,34 @@
+﻿@model IEnumerable<Web_Projektas.Models.Quote>
+@{
+    ViewData["Title"] = "Index";
+}
+<style>
+    h1 {
+        text-align: center;
+        background-color: black;
+    }
+
+    kl {
+        font-family: Arial;
+        font-size: 18px;
+    }
+</style>
+
+<um>
+    <div style="font-family:Arial">
+        <h1>Quotes</h1>
+    </div>
+    <kl>
+        @foreach (Quote quotes in Model)
+        {
+        <tr>
+            <td>@quotes.Id</td>
+            <td>@quotes.Text>
+            <td>@quotes.CreatingDate</td>
+            <td>@quotes.UserId</td>
+            <td>@quotes.TopicId</td>
+            <td>@quotes.AuthorId</td>
+        </tr>
+        }
+    </kl>
+</um>

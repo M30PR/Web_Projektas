@@ -1,0 +1,51 @@
+﻿@model IEnumerable<Web_Projektas.Models.Quote>
+@using Web_Projektas.Controllers
+<style>
+    h1 {
+        text-align: center;
+        background-color: black;
+    }
+
+    ul {
+        font-family: Arial;
+        font-size: 18px;
+        -webkit-columns: 3;
+        -moz-columns: 3;
+        columns: 1;
+        column-fill: auto;
+        padding: 10px;
+    }
+
+    .s1 {
+        background-color: #ccffcc;
+        border-style: outset;
+        border-width: 8px;
+        border-color: coral;
+        font-family: Arial;
+        font-size: 18px;
+        color: black;
+        margin: 5px;
+        padding-left: 10px;
+        padding-left: 10px;
+        height: auto;
+    }
+</style>
+
+<um>
+    <div style="font-family:Arial">
+        <h1>Quotes</h1>
+    </div>
+    <ul>
+        @foreach (Quote quotes in Model)
+        {
+            string s = AuthorsController.ReturnAuthor(quotes.AuthorId);
+             <div class="s1">
+            
+                <p>@quotes.Text</p>
+                <a href="/Authors/Details/@quotes.AuthorId">@s</a>
+                <p></p>
+                 </div>
+             <p></p>
+        }
+    </ul>
+</um>

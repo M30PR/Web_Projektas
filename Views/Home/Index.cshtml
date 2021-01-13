@@ -1,0 +1,88 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="container">
+    <div class="search">
+        <input type="text" placeholder="Search..">
+        <button class="btn">Search</button>
+    </div>
+    @section Scripts {
+        <script>
+            $(document).ready(function () {
+                $("#content1").hover(function () {
+                    $("#content1").css("background-color", "cornsilk");
+                },
+                    function () {
+                        $("#content1").css("background-color", "coral");
+                    });
+            });
+            $(document).ready(function () {
+                $("#content2").hover(function () {
+                    $("#content2").css("background-color", "cornsilk");
+                },
+                    function () {
+                        $("#content2").css("background-color", "coral");
+                    });
+            });
+            $(document).ready(function () {
+                $("#content3").hover(function () {
+                    $("#content3").css("background-color", "cornsilk");
+                },
+                    function () {
+                        $("#content3").css("background-color", "coral");
+                    });
+            });
+        </script>
+    }
+    <div id="content1">
+        <h2 id="pageTitle">Popular Topics</h2>
+        <p>
+            <ul class="columns" data-columns="2">
+                <li>Motivational</li>
+                <li>Positive</li>
+                <li>Inspirational</li>
+                <li>Attitude</li>
+                <li>Life</li>
+                <li>Love</li>
+                <li>Beauty</li>
+            </ul>
+        </p>
+    </div>
+    <div id="content2">
+        <h2 id="pageTitle">Popular Authors</h2>
+        <p>
+            <ul class="columns" data-columns="2">
+                <li>Mark Twain</li>
+                <li>Francis of Assisi</li>
+                <li>William Shakespeare</li>
+                <li>Nelson Mandela</li>
+                <li>Mahatma Gandhi</li>
+                <li>Confucius</li>
+                <li>Eleanor Roosevelt</li>
+                <li>Albert Einstein</li>
+                <li>Aristotle</li>
+                <li>Ralph Waldo Emerson</li>
+            </ul>
+        </p>
+    </div>
+    <div id="content3">
+        <h2 id="pageTitle">In the News</h2>
+        <p>
+            <ul class="columns" data-columns="2">
+                <li>Anand Giridharadas</li>
+                <li>Steve Miller</li>
+                <li>Kate Winslet</li>
+                <li>Nelson Mandela</li>
+                <li>Zane Grey</li>
+                <li>Denis Diderot</li>
+                <li>Ralph H. Baer</li>
+                <li>Hans Hofmann</li>
+                <li>Bernie Mac</li>
+                <li>Vaclav Havel</li>
+            </ul>
+        </p>
+    </div>
+</div>@{
+    ViewData["Title"] = "Home Page";
+}

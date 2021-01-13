@@ -1,0 +1,37 @@
+﻿@model IEnumerable<Web_Projektas.Models.Tag>
+
+@{
+    ViewData["Title"] = "Index";
+}
+<style>
+    il {
+        width: 600px;
+        height: 400px;
+        background-color: #ccc;
+    }
+
+    h1 {
+        text-align: center;
+        background-color: black;
+    }
+
+    ul {
+        font-family: Arial;
+        font-size: 18px;
+        columns: 3;
+        -webkit-columns: 3;
+        -moz-columns: 3;
+    }
+</style>
+
+<h1>Tag List</h1>
+<il>
+    <ul>
+        @foreach (Tag tag in Model)
+        {
+            <li>
+                @Html.ActionLink(tag.Name, "Details", new { id = tag.TagsId })
+            </li>
+        }
+    </ul>
+</il>

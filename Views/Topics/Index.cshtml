@@ -1,0 +1,35 @@
+﻿@model IEnumerable<Web_Projektas.Models.Topic>
+
+@{
+    ViewData["Title"] = "Index";
+}
+<style>
+    il {
+        width: 600px;
+        height: 400px;
+        background-color: #ccc;
+    }
+    h1 {
+        text-align: center;
+        background-color: black;
+    }
+    ul {
+        font-family:Arial;
+        font-size: 18px;
+        columns: 3;
+        -webkit-columns: 3;
+        -moz-columns: 3;
+    }
+</style>
+
+<h1>Topics List</h1>
+<il> 
+<ul>
+    @foreach (Topic Topics in Model)
+    {
+        <li>
+            @Html.ActionLink(Topics.Name, "Details", new { id = Topics.TopicId })
+        </li>
+    }
+</ul>
+</il>

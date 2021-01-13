@@ -1,0 +1,63 @@
+﻿@model Web_Projektas.Models.Author
+@using Web_Projektas.Controllers
+<style>
+    h1 {
+        text-align: center;
+        background-color: black;
+    }
+
+    ul {
+        font-family: Arial;
+        font-size: 18px;
+        columns: 3;
+        -webkit-columns: 3;
+        -moz-columns: 3;
+    }
+
+    .s1 {
+        background-color: #ccffcc;
+        border-style: outset;
+        border-width: 8px;
+        border-color: coral;
+        font-family: Arial;
+        font-size: 18px;
+        color: black;
+        margin: 5px;
+        padding-left: 10px;
+        padding-left: 10px;
+    }
+    .s2 {
+        background-color: #000000;
+        font-family: Arial;
+        font-size: 18px;
+        color: black;
+        font-size: 30px;
+        color: #DCDCDC;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+</style>
+
+
+@{
+    ViewData["Title"] = "Details";
+    string line2 = new string(Model.Name + " " + Model.Surname + " ｜ " + NationalityController.ReturnNationality(Model.NationalityId) + " - " + ProfessionController.ReturnProfession(Model.ProfesionId));
+    List<Quote> quotesdb = AuthorsController.AuthorQuotes(Model.AuthorId);
+}
+
+
+<um>
+    <div class="s2">
+        <p>@line2</p>
+    </div>
+    <ul>
+        @foreach (Quote quotes in quotesdb)
+        {
+            string line3 = AuthorsController.ReturnAuthor(quotes.AuthorId);
+            <div class="s1">
+                <p>@quotes.Text</p>
+                <a href="/Authors/Details/@quotes.AuthorId">@line3</a>
+            </div>
+        }
+    </ul>
+</um>

@@ -1,0 +1,33 @@
+﻿@model IEnumerable<Web_Projektas.Models.Author>
+
+@{
+    ViewData["Title"] = "Index";
+}
+<style>
+    h1 {
+        text-align: center;
+        background-color: black;
+    }
+    ul {
+        font-family: Arial;
+        font-size: 18px;
+        columns: 3;
+        -webkit-columns: 3;
+        -moz-columns: 3;
+    }
+</style>
+
+<um>
+<div style="font-family:Arial">
+    <h1>Authors list</h1>
+</div>
+<ul>
+    @foreach (Author Authors in Model)
+    {
+        string line = new string(Authors.Name + "_" + Authors.Surname);
+        <li>
+            @Html.ActionLink(line, "Details", new { id = Authors.AuthorId })
+        </li>
+    }
+</ul>
+</um>

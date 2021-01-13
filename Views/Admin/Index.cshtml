@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - WebApplication1</title>
+    <link rel="icon" href="Images/logo.jpg" type="image/icon type" />
+    <link rel="stylesheet" href="~/css/style.css" type="text/css" />
+</head>
+<body>
+    <div id="header">
+        <div class="logo">
+            <a href="#"><img src="Images/logo.jpg"></a>
+        </div>
+        <div class="topMenu">
+            <a class="active" href="#home">Site</a>
+
+            <a href="/Admin/AllQuotes" title="AllQuotes">AllQuotes</a>
+            <a href="/Admin/Authors" title="Authors">Authors</a>
+            <a href="/Admin/CreateQuote" title="CreateQuote">CreateQuote</a>
+            <a href="/Admin/Users" title="Users">Users</a>
+            <a href="/Logout" title="Logout">Logout</a>
+        </div>
+    </div>
+    @RenderBody()
+    @RenderSection("Scripts", required: false)
+</body>
+</html>
